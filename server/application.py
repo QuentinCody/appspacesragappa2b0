@@ -25,6 +25,11 @@ app = FastAPI()
 #     allow_headers=["*"],  # Allows all headers
 # )
 
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+
 #
 ##
 ### Helper functions for querying Qdrant database
